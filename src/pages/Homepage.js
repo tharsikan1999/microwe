@@ -1,10 +1,11 @@
 import React from "react";
+import Main from "../components/HomePage/Main";
 
 function Homepage() {
   return (
-    <div className=" w-full h-[300px] flex justify-center items-center bg-gray-600">
-      Homepage
-    </div>
+    <>
+      <Main />
+    </>
   );
 }
 

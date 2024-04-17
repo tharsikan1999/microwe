@@ -16,7 +16,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className=" bg-customWhite dark:bg-gray-900 fixed w-full z-20 dark:border-gray-600 pl-2 pr-4 lg:p-0">
+      <nav className=" bg-customWhite dark:bg-gray-900 fixed w-full dark:border-gray-600 pl-2 pr-4 lg:p-0">
         <div className="max-w-screen-xl flex flex-wrap sm:flex-nowrap items-center justify-between mx-auto p-2">
           <Link to="/">
             <div className="flex">
@@ -34,9 +34,11 @@ function Navbar() {
             aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
             {isOpen ? (
-              <span className="text-4xl">&#10006;</span>
+              <span className="text-4xl text-customRed">&#10006;</span>
             ) : (
-              <span className="text-3xl">&#9776;</span>
+              <span className="text-3xl  text-customRed bg-white rounded-lg px-2">
+                &#9776;
+              </span>
             )}
           </button>
 
