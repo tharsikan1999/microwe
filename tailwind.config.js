@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         customRed: "#900B11",
         customWhite: "#F7F8FD",
+        customOrange: "#EAB308",
       },
     },
   },

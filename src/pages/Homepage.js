@@ -1,10 +1,14 @@
 import React from "react";
-import Main from "../components/HomePage/Main";
+import About from "../components/HomePage/About";
+import UserReview from "../components/HomePage/UserReview";
+import Services from "../components/HomePage/Services";
 
 function Homepage() {
   return (
     <>
-      <Main />
+      <About />
+      <Services />
+      <UserReview />
     </>
   );
 }

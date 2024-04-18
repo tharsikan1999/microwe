@@ -1,9 +1,7 @@
 import React from "react";
 import logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
-import { IoHome } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa6";
+
 import {
   FaFacebook,
   FaGithub,
@@ -60,8 +58,8 @@ function Footer() {
               business results.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 md:px-8 lg:px-0  md:pt-5 ">
-            <div>
+          <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-4 md:px-8 lg:px-0  md:pt-5  justify-center ">
+            <div className="  flex flex-col items-center md:items-start">
               <h2 className="mb-6 text-lg font-extrabold text-gray-800 uppercase dark:text-white">
                 Products
               </h2>
@@ -80,47 +78,58 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+
+            <div className="  flex flex-col items-center md:items-start">
+              <h2 className="mb-6 text-lg font-extrabold text-gray-900 uppercase dark:text-white  hover:text-gray-950 dark:hover:text-white">
+                Solutions
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Marketing</Link>
+                </li>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Analytics</Link>
+                </li>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Commerce</Link>
+                </li>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Insights</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="  flex flex-col items-center md:items-start">
+              <h2 className="mb-6 text-lg font-extrabold text-gray-900 uppercase dark:text-white  hover:text-gray-950 dark:hover:text-white">
+                Company
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">About</Link>
+                </li>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Blog</Link>
+                </li>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Jobs</Link>
+                </li>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Partners</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="  flex flex-col items-center md:items-start">
               <h2 className="mb-6 text-lg font-extrabold text-gray-900 uppercase dark:text-white  hover:text-gray-950 dark:hover:text-white">
                 Legal
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
-                  <Link to="/">Privacy Policy</Link>
+                  <Link to="/">Privacy</Link>
                 </li>
                 <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
-                  <Link to="/">Terms &amp; Conditions</Link>
+                  <Link to="/">Terms</Link>
                 </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-lg font-extrabold text-gray-900 uppercase dark:text-white">
-                Contact
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4 flex space-x-3 items-center">
-                  <Link to="/" className=" flex space-x-3 items-center">
-                    <IoHome className=" hover:text-gray-950 dark:hover:text-white" />
-                    <span className="ms-2 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
-                      kondavil, Sri Lanka
-                    </span>
-                  </Link>
-                </li>
-                <li className="mb-4 flex space-x-3 items-center">
-                  <Link to="/" className=" flex space-x-3 items-center">
-                    <MdEmail className=" hover:text-gray-950 dark:hover:text-white" />
-                    <span className="ms-3 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
-                      info@example.com
-                    </span>
-                  </Link>
-                </li>
-                <li className="mb-4 text-lg font-semibold">
-                  <Link to="/" className=" flex space-x-3 items-center">
-                    <FaPhone className=" hover:text-gray-950 dark:hover:text-white" />
-                    <span className="ms-2 text-lg font-semibold hover:text-gray-950 dark:hover:text-white">
-                      + 94 0751234567
-                    </span>
-                  </Link>
+                <li className="mb-4 text-lg font-semibold  hover:text-gray-950 dark:hover:text-white">
+                  <Link to="/">Claim</Link>
                 </li>
               </ul>
             </div>
