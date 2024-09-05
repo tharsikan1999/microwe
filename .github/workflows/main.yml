@@ -1,0 +1,53 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Backend dependencies
+        working-directory: ./
+        run: pnpm install
+
+      - name: Run Backend tests
+        working-directory: Backend
+        run: pnpm test
+
+      - name: Start Backend server
+        working-directory: Backend
+        run: pnpm serve &
+
+      - name: Install Frontend dependencies
+        working-directory: Frontend
+        run: pnpm install
+
+      - name: Run Frontend tests
+        working-directory: Frontend
+        run: pnpm test
+
+      - name: Build Frontend
+        working-directory: Frontend
+        run: pnpm run build
+
+      - name: Start Frontend server
+        working-directory: Frontend
+        run: pnpm serve &
